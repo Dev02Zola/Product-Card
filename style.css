@@ -1,0 +1,85 @@
+/*Para tirar os espaços é bom resetar o css:*/
+*{
+    margin: 0; /*tirando todos os espaços com 0*/
+    padding: 0; /*todos ps preenchimentos internos das caixas com 0*/
+    box-sizing: border-box; /*pegar a medida da caixa com border-box*/
+    -webkit-font-smoothing: antialiased; /*deixa os traços um pouquinho mais finos paa os browsers chrome, safari, edge*/
+    -moz-osx-font-smoothing: grayscale; /*para os dispositivos firefox que funcionam no mac, no sistema operacional osx vai funcionar também esse tracinho fraquinho também. Lembrando que não é pra todo*/
+}
+
+:root{
+    --bg-color: #d9cdf7;
+    --text-color: #271a45;
+}
+body{
+    background-color: var(--bg-color);
+    height: 100vh;
+    /*Para colocar a caixa bem no meio:*/
+    display: grid; /*o display grid vai simplesmente jogar bem ao meio*/
+    /*Podemos ainda também colocar:*/
+    place-content: center; /*aí ele vai centalizar as laterais*/
+}
+body *{
+    color: var(--text-color);    
+    font-family: 'Lato', sans-serif;
+    line-height: 100%;
+}
+#btn-close,
+#animated{
+    display: none;
+}
+#app{
+    display: flex; /*deixando os itens ou as estruturas um ao lado do outro*/
+    align-items: center; /*deixando os elementos alinhados ao meio*/
+    /*Apartir do momento em que a caixa #app é flex (display: flex), os elementos dentro dela serão flexíveis às propriedades que formos colocar aí*/
+    gap: 63px; /*nos permite espaçar os elementos*/
+}
+#product-image{
+    position: relative;
+}
+#product-image button{
+    position: absolute;
+    right: 0; 
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+html.animated button#btn-360,
+html.animated img#static{
+    display: none;
+}
+html.animated button#btn-close,
+html.animated img#static{
+    display: initial;
+}
+
+#product-image > img{
+    width: 449px;
+    height: 222px;
+    object-fit: cover; /*removendo a linha ou o tracinho*/
+}
+h4{
+    font-weight: 300;
+    font-size: 10px;
+}
+
+h1{
+    font-family: 'Crimson Pro', serif;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 12px;
+}
+p{
+    margin-top: 12px;
+    opacity: 0.67;
+}
+#product-details button{
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 16px;
+    border: 0.5px solid var(--text-color);
+    border-radius: 999px;
+    background-color: transparent;
+    margin-top: 20px;
+}

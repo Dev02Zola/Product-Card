@@ -50,7 +50,7 @@ html.animated img#static{
     display: none;
 }
 html.animated button#btn-close,
-html.animated img#static{
+html.animated img#animated{
     display: initial;
 }
 

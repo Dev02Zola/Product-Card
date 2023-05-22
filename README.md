@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>Music Player</td>
+                <td>Card de Produtos</td>
                 <td>2023</td>
                 <td><a href="01"></a></td>
             </tr>
